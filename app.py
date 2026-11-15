@@ -25,7 +25,7 @@ import clinical_workspace
 
 
 ROOT = Path(__file__).resolve().parent
-OUTPUT_DIR = ROOT / "benchmark_outputs"
+OUTPUT_DIR = ROOT
 MODEL_NAMES = ["XGBoost", "DNN", "MLP", "TabNet", "Wide and Deep", "TabPFN"]
 RAW_INPUT_COLUMNS = [
     "gender",

@@ -1,0 +1,44 @@
+{
+  "model": "DiabetesScreeningDNN",
+  "purpose": "Screening support before confirmatory laboratory diagnosis",
+  "features": [
+    "gender",
+    "smoking_history",
+    "age",
+    "bmi",
+    "hypertension"
+  ],
+  "excluded_diagnostic_features": [
+    "HbA1c_level",
+    "blood_glucose_level"
+  ],
+  "training_source": "Local Diabetes Prediction Dataset",
+  "training_rows": 80000,
+  "local_test": {
+    "rows": 20000,
+    "positive_rate": 0.085,
+    "threshold": 0.05,
+    "accuracy": 0.5863,
+    "precision": 0.16169205434335118,
+    "recall": 0.9241176470588235,
+    "f1": 0.27522775052557813,
+    "roc_auc": 0.8349127290260367,
+    "pr_auc": 0.31792176287800755,
+    "brier_score": 0.06677199873650068
+  },
+  "nhanes_external_validation": {
+    "rows": 6508,
+    "positive_rate": 0.16548862937922557,
+    "threshold": 0.05,
+    "accuracy": 0.4595881991395206,
+    "precision": 0.23020787262273332,
+    "recall": 0.9665738161559888,
+    "f1": 0.37185211644936594,
+    "roc_auc": 0.7901803276250188,
+    "pr_auc": 0.38716736725691936,
+    "brier_score": 0.1178708097263131
+  },
+  "nhanes_rows": 6508,
+  "nhanes_reference_definition": "Self-reported diabetes or HbA1c >= 6.5% or fasting glucose >= 126 mg/dL when a reference value was available",
+  "warning": "NHANES is an external research validation population, not a prospective clinical trial."
+}

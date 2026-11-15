@@ -1,0 +1,182 @@
+{
+  "version": "screening-v2",
+  "created_at": "2026-09-19T16:44:28.253738+00:00",
+  "seed": 42,
+  "source_rows": 100000,
+  "duplicate_rows_removed": 3854,
+  "adult_rows": 79458,
+  "source_sha256": "f233fc470e904201f35310d061cb46ca0a6bc7ca5c3e428b769fb4f87f69929b",
+  "splits": {
+    "test": {
+      "rows": 7625,
+      "positive_rate": 0.10780327868852459
+    },
+    "threshold": {
+      "rows": 7517,
+      "positive_rate": 0.1061593720899295
+    },
+    "calibration": {
+      "rows": 7853,
+      "positive_rate": 0.10339997453202597
+    },
+    "validation": {
+      "rows": 8580,
+      "positive_rate": 0.11468531468531469
+    },
+    "train": {
+      "rows": 47883,
+      "positive_rate": 0.10408704550675606
+    }
+  },
+  "feature_group_overlap": 0,
+  "threshold": 0.06284168681570006,
+  "threshold_target_sensitivity": 0.9,
+  "threshold_selection": {
+    "rows": 7517,
+    "positive_rate": 0.1061593720899295,
+    "threshold": 0.06284168681570006,
+    "sensitivity": 0.9010025062656641,
+    "specificity": 0.4820657835987498,
+    "precision": 0.1712312455346511,
+    "npv": 0.9761904761904762,
+    "accuracy": 0.5265398430224824,
+    "f1": 0.2877726635981589,
+    "roc_auc": 0.7868721140550439,
+    "average_precision": 0.2868821034026271,
+    "brier": 0.08445598194449441,
+    "tn": 3239.0,
+    "fp": 3480.0,
+    "fn": 79.0,
+    "tp": 719.0
+  },
+  "local_test": {
+    "rows": 7625,
+    "positive_rate": 0.10780327868852459,
+    "threshold": 0.06284168681570006,
+    "sensitivity": 0.9221411192214112,
+    "specificity": 0.508305159488461,
+    "precision": 0.18474287106994883,
+    "npv": 0.9818285065303805,
+    "accuracy": 0.5529180327868852,
+    "f1": 0.30781725888324873,
+    "roc_auc": 0.8168843143124562,
+    "average_precision": 0.356739639854703,
+    "brier": 0.08183381066387363,
+    "tn": 3458.0,
+    "fp": 3345.0,
+    "fn": 64.0,
+    "tp": 758.0
+  },
+  "nhanes_external": {
+    "rows": 3252,
+    "positive_rate": 0.18788437884378845,
+    "threshold": 0.06284168681570006,
+    "sensitivity": 0.9509001636661211,
+    "specificity": 0.35857629685725106,
+    "precision": 0.2553846153846154,
+    "npv": 0.9692937563971341,
+    "accuracy": 0.4698646986469865,
+    "f1": 0.40263340263340264,
+    "roc_auc": 0.7797959410058308,
+    "average_precision": 0.41957113177734473,
+    "brier": 0.12973036550675707,
+    "tn": 947.0,
+    "fp": 1694.0,
+    "fn": 30.0,
+    "tp": 581.0
+  },
+  "nhanes_weighted_point_estimates": {
+    "rows": 3252,
+    "positive_rate": 0.15030075562591866,
+    "threshold": 0.06284168681570006,
+    "sensitivity": 0.9240590155099156,
+    "specificity": 0.4579732267616365,
+    "precision": 0.2316916796375827,
+    "npv": 0.9715044617568692,
+    "accuracy": 0.5280262729970052,
+    "f1": 0.37048956368643177,
+    "roc_auc": 0.8064957860589436,
+    "average_precision": 0.3967986778684052,
+    "brier": 0.10668826782840278,
+    "tn": 96826605.36044382,
+    "fp": 114597555.9275688,
+    "fn": 2840055.1357339625,
+    "tp": 34558131.82225564
+  },
+  "local_brier_before_calibration": 0.08186281704750299,
+  "local_prevalence_baseline_brier": 0.09619554218159015,
+  "external_flow": [
+    {
+      "stage": "All demographic records",
+      "rows": 11933
+    },
+    {
+      "stage": "Adults 18\u201380; known pregnancy excluded",
+      "rows": 8112
+    },
+    {
+      "stage": "Valid fasting-subsample weight and BOTH laboratory markers",
+      "rows": 3303
+    },
+    {
+      "stage": "Known questionnaire answer and complete screening inputs",
+      "rows": 3252
+    }
+  ],
+  "sources": [
+    {
+      "name": "DEMO_L",
+      "sha256": "ca4374a158b493b8b0163e1388da21d57a18d1b9cecff2aa4e2fa2bec494fe23",
+      "codebook": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DEMO_L.htm"
+    },
+    {
+      "name": "DIQ_L",
+      "sha256": "9535a023673ae869afae19d842d8679e06f6a464606ac15900686b41ef05090f",
+      "codebook": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/DIQ_L.htm"
+    },
+    {
+      "name": "GHB_L",
+      "sha256": "67aee0353160e2392dc0a33bece99b90764a630c76d82415ac4639105ad9dd03",
+      "codebook": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/GHB_L.htm"
+    },
+    {
+      "name": "GLU_L",
+      "sha256": "70f773ab37e3d8485341f32137e280e05b9279e5fe9b6f0362e4052d8fe9a201",
+      "codebook": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/GLU_L.htm"
+    },
+    {
+      "name": "BMX_L",
+      "sha256": "44440c416d9ad709e8b1708a5975378ab4d5b18edc39eb5015c2ae7186500170",
+      "codebook": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BMX_L.htm"
+    },
+    {
+      "name": "BPQ_L",
+      "sha256": "0acde3af0526c375942fe0735e3bf69a0422bcbc606f98a478209d2f47baa4b5",
+      "codebook": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/BPQ_L.htm"
+    },
+    {
+      "name": "SMQ_L",
+      "sha256": "abbefebfa5585b1e19c079fa14be20c113a4649318070197214b258d05b93c50",
+      "codebook": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2021/DataFiles/SMQ_L.htm"
+    }
+  ],
+  "epochs_completed": 23,
+  "trainable_parameters": 3265,
+  "versions": {
+    "tensorflow": "2.21.0",
+    "scikit-learn": "1.6.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.2"
+  },
+  "limitations": [
+    "Dataset provenance and individual patient identifiers are unavailable; feature grouping is not a verified patient-level split.",
+    "Local diabetes labels have undocumented ascertainment. This is cross-sectional classification, not prediction of future diabetes.",
+    "NHANES reference is self-reported diabetes OR a single elevated HbA1c/fasting glucose; it is not confirmed clinical diagnosis.",
+    "NHANES includes known diabetes; performance is not validated specifically for undiagnosed screening.",
+    "NHANES smoking means at least 100 lifetime cigarettes; local smoking definitions are not documented. Harmonization is approximate.",
+    "Local pregnancy status is unavailable; known pregnancies excluded externally, unknown pregnancy status may remain.",
+    "External complete-case selection can introduce bias. Weighted metrics are point estimates only; no survey-design confidence intervals or population-validity claim.",
+    "Calibration and threshold fitted locally may not transport to NHANES or a hospital. No prospective, clinical-outcome or regulatory validation.",
+    "One fixed-seed training run, not a repeated-seed or multi-hospital study."
+  ]
+}

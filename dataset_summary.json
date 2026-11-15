@@ -1,0 +1,50 @@
+{
+  "rows": 100000,
+  "columns": 9,
+  "positive_cases": 8500,
+  "negative_cases": 91500,
+  "positive_rate_percent": 8.5,
+  "train_rows_before_balance": 80000,
+  "test_rows": 20000,
+  "train_class_counts_before_balance": {
+    "0": 73200,
+    "1": 6800
+  },
+  "train_class_counts_after_smote": {
+    "0": 73200,
+    "1": 73200
+  },
+  "test_class_counts": {
+    "0": 18300,
+    "1": 1700
+  },
+  "raw_feature_columns": [
+    "gender",
+    "hypertension",
+    "heart_disease",
+    "smoking_history",
+    "age",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level"
+  ],
+  "model_feature_columns": [
+    "gender_0",
+    "gender_1",
+    "gender_2",
+    "hypertension_0",
+    "hypertension_1",
+    "heart_disease_0",
+    "heart_disease_1",
+    "smoking_history_0",
+    "smoking_history_1",
+    "smoking_history_2",
+    "smoking_history_3",
+    "smoking_history_4",
+    "smoking_history_5",
+    "age",
+    "bmi",
+    "HbA1c_level",
+    "blood_glucose_level"
+  ]
+}

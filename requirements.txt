@@ -1,0 +1,7 @@
+streamlit>=1.63
+pandas
+numpy
+scikit-learn
+tensorflow-cpu
+xgboost
+matplotlib
